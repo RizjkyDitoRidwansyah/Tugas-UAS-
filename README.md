@@ -54,5 +54,6 @@ while True:
 ```
 # Penjelasan
 Didalam program utama terdapat modul yang di import ke file 'from view import input_nilai', 'view_nilai' & 'from model import daftar_nilai'.
+contoh tamp
 
 
