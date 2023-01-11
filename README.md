@@ -194,6 +194,8 @@ Program ini terdapat modul untuk menghubungkan antara input_nilai.py ke program 
 
 # ![Screenshot_20230110_103645](https://user-images.githubusercontent.com/116090827/211706761-4fb0064b-bb60-4e6c-9317-d24a543b4f18.png)
 
+Link Youtube : https://youtu.be/smQfWCo409Y
+
 
 
 
