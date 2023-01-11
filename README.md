@@ -128,13 +128,71 @@ Didalam program utama terdapat modul yang di import ke file 'from view import in
             print(f"Nilai TUGAS   : {self.tugas[index]}")
         else:
             print("NAMA {0} TIDAK ADA!".format(nama))
-            
-# Penjelasan 
- Pada bagian daftar_nilai.py berisi program untuk menambahkan data,hapus data,ubah data NIM,dan mencari data.
- 
-## Tampilan output tambah data ;
+```
 
-# ![Screenshot_20230110_102233](https://user-images.githubusercontent.com/116090827/211703072-af367e25-4aee-457a-8da9-778ab22954cd.png)
+## Penjelasan
+Pada Bagian daftar_nilai.py berisi program dengan perintah menambahkan data,hapus data, ubah data NIM dan mencari data.
+
+### Tampilan output dari tambah data :
+# ![Screenshot_20230110_102233](https://user-images.githubusercontent.com/116090827/211704646-cd133bf4-1a96-43b2-8708-166d2ea07209.png)
+
+### Tmapilan hapus data :
+# ![Screenshot_20230110_102553](https://user-images.githubusercontent.com/116090827/211704814-bc177f4e-3c26-402c-8ebd-2f8d030e3ed5.png)
+
+### Tampilan ubah data :
+# ![Screenshot_20230110_103102](https://user-images.githubusercontent.com/116090827/211705064-fbd8e230-82c2-4d49-a722-bdcb4b4638d8.png)
+
+### Tampilan mencari data : 
+# 
+![Screenshot_20230110_103237](https://user-images.githubusercontent.com/116090827/211705177-255152c9-402a-494e-ae13-3fe099f1a7bf.png)
+
+# 3.view_nilai.py berisi sourcecode yang berfungsi menampilkan seluruh data 
+```pyhton
+from model import daftar_nilai
+
+data = daftar_nilai.Data_mahasiswa()
+
+# Menampilkan seluruh data 
+def lihat():
+    for i in range(len(data.nama)):
+        print(f"\nData ke -{i+1}")
+        print(f"Nama Mahasiswa: {data.nama[i]}")
+        print(f"NIM Mahasiswa : {data.nim[i]}")
+        print(f"Nilai UTS     : {data.uts[i]}")
+        print(f"Nilai UAS     : {data.uas[i]}")
+        print(f"Nilai TUGAS   : {data.tugas[i]}")
+```
+## Penjelasan
+Di program ini terdapat modul yang mengnyambung view_nilai.py kedalam file program daftar_nilai.py
+
+# 4.input_nilai.py berisi code yang berfungsi untuk menginput data nilai
+
+```python
+from model import daftar_nilai
+
+data = daftar_nilai.Data_mahasiswa()
+
+def nilai():
+        print("Input Nilai")
+        print("="*15)
+        input_nama = input("Masukan Nama   : ")
+        if input_nama in data.nama:
+            index = data.nama.index(input_nama)
+            data.uts[index]     = int(input("Nilai UTS      : "))
+            data.uas[index]     = int(input("Nilai UAS      : "))
+            data.tugas[index]   = int(input("Nilai Tugas    : "))
+
+            print("\nData nilai berhasil di input!")
+        else:
+            print("NAMA {0} TIDAK ADA! / ANDA BELUM MENAMBAH DATA".format(input_nama))
+```
+## Penjelasan 
+Program ini terdapat modul untuk menghubungkan antara input_nilai.py ke program daftar_nilai.py
+
+### Tampilan output input_nilai.py ;
+# ![Screenshot_20230110_103340](https://user-images.githubusercontent.com/116090827/211706687-e61495d5-c628-4f0b-8a71-a23dd1364c81.png)
+
+# ![Screenshot_20230110_103645](https://user-images.githubusercontent.com/116090827/211706761-4fb0064b-bb60-4e6c-9317-d24a543b4f18.png)
 
 
 
