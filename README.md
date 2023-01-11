@@ -53,4 +53,6 @@ while True:
         print("\n INPUT {} TIDAK ADA!, Silakan pilih [T/L/I/H/U/K] untuk menjalankan program!".format(menu))
 ```
 # Penjelasan
+Didalam program utama terdapat modul yang di import ke file 'from view import input_nilai', 'view_nilai' & 'from model import daftar_nilai'.
+
 
