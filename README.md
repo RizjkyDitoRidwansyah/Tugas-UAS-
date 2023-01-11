@@ -1,7 +1,7 @@
 UAS
 
 # 1.Main.py berisi program utama
-
+```phyton
 from view import input_nilai, view_nilai
 from model import daftar_nilai
 
@@ -51,6 +51,6 @@ while True:
 
     else:
         print("\n INPUT {} TIDAK ADA!, Silakan pilih [T/L/I/H/U/K] untuk menjalankan program!".format(menu))
-
+```
 # Penjelasan
 
